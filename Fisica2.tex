@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=0.5cm]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+
+%disattivo i riferimenti alle formule
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs}
+
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage[italian]{babel}
+\selectlanguage{italian}
+
+\begin{document}
+	
+	\title{\Large\bfseries Formulario di Fisica 2\vspace{-1em}}
+	\author{Pardini Fabrizio\vspace{-1cm}}
+	\date{\today\vspace{-1em}}
+	\maketitle
+	
+	\begin{multicols}{3}
+		\setlength{\columnseprule}{0.03pt}
+		\def\columnseprulecolor{\color{black}}
+		
+		\section{Elettrostatica}
+		
+		
+		\begin{equation}
+			\text{Legge di coulomb:}F=k*\frac{Q_{1}Q_{2}}{r^{2}}\hat{r}
+		\end{equation}
+	
+		\begin{equation}
+			\text{Dove k vale:}k=\frac{1}{4\pi\epsilon_{0}}
+		\end{equation}
+	
+		Campo elettrico:
+		\begin{equation}
+			\vec{E}=\frac{\vec{F}}{q}=k\frac{Q}{r^{2}}
+		\end{equation}
+		
+		
+		\section{Altra sezione di esempio}
+		
+		Questa è un'altra sezione di esempio. Inseriamo un'altra formula matematica di fisica, ad esempio la legge di Ohm per la corrente elettrica:
+		
+		\begin{equation}
+			I=\frac{V}{R}
+		\end{equation}
+		
+		Questa formula descrive la relazione tra la corrente elettrica, la differenza di potenziale e la resistenza di un circuito.
+		
+		
+		\section{Lorem}
+		\lipsum[1-20]
+	\end{multicols}
+	
+\end{document}
