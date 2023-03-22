@@ -10,9 +10,25 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: Fisica2.tex
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+          
+          
+      - name: Create release
+        id: create_release
+        if: ${{ ( github.event_name == 'push' && github.ref == 'refs/heads/master' ) || github.event.inputs.create_release == 'true' }}
+        uses: zendesk/action-create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.UPLOAD_TOKEN }}
         with:
-          token: ${{ secrets.UPLOAD_TOKEN }}
-          files: Fisica2.pdf
+          tag_name: ${{ env.BRANCH_NAME }}-${{ steps.commit.outputs.short }}
+
+      - name: Upload release
+        id: upload_release
+        if: ${{ ( github.event_name == 'push' && github.ref == 'refs/heads/master' ) || github.event.inputs.create_release == 'true' }}
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.UPLOAD_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} 
+          asset_path: .\Fisica2.pdf
+          asset_name: Fisica2.pdf
+          asset_content_type: application/pdf
