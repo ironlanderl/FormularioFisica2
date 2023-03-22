@@ -18,8 +18,6 @@ jobs:
         uses: zendesk/action-create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.UPLOAD_TOKEN }}
-        with:
-          tag_name: ${{ env.BRANCH_NAME }}-${{ steps.commit.outputs.short }}
 
       - name: Upload release
         id: upload_release
