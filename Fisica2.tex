@@ -39,17 +39,17 @@
 		\begin{equation}
 			\text{Legge di coulomb: }F=k\frac{Q_{1}Q_{2}}{r^{2}}\hat{r}
 		\end{equation}
-	
+		
 		\begin{equation}
 			\text{Dove k vale }=\frac{1}{4\pi\epsilon_{0}}
 		\end{equation}
-	
+		
 		
 		\begin{equation}
 			\text{Campo elettrico: }\vec{E}=\frac{\vec{F}}{q}=k\frac{Q}{r^{2}}
 		\end{equation}
-	
-	
+		
+		
 		\section{Res, Res e Cond}
 		
 		\begin{equation}
@@ -57,30 +57,67 @@
 			\frac{\text{volt}}{\text{ampere}}=\Omega\text{(ohm)}
 			\right]
 		\end{equation}
-	
+		
 		\begin{equation}
 			p=\frac{E}{j} \left[
 			\frac{V}{m} \cdot \frac{m^{2}}{A} = \Omega \cdot m
 			\right]
 		\end{equation}
-	
+		
 		\begin{equation}
 			\theta = \frac{1}{p} \left[
 			\frac{1}{\Omega \cdot m} = \frac{S\text{(siemens)}}{m}
 			\right]
 		\end{equation}
-	
-	
+		
+		
 		\section{1° Maxwell}
 		
 		\begin{equation}
 			\text{Gauss: } \phi_{s}\left(\vec{E}\right) = \oint_S\vec{E}\hat{n}dS=\frac{Q_{int}}{\epsilon_{0}}
 		\end{equation}
-	
+		
+		\begin{align*}
+			\text{Differenziale: } div\vec{E}_{0} &= \frac{\rho}{\epsilon_{0}} \\
+			\Rightarrow \vec{\nabla}\vec{E}_{0} &= \frac{\rho}{\epsilon_{0}}
+		\end{align*}
+		
+		
+		
+		
+		
+		\section{Potenziale elettrostatico}
+		
 		\begin{equation}
-			\text{Differenziale: } div\vec{E}_{0} = \frac{\rho}{\epsilon_{0}}
-			\rightarrow \vec{\nabla}\vec{E}_{0} = \frac{\rho}{\epsilon_{0}}
+			\text{Nel vuoto: } \vec{E}_{0}\left(\vec{r}\right) = k\frac{Q}{r^{2}}\hat{r}
 		\end{equation}
+		
+		\begin{align*}
+			\int_{A}^{B} \vec{E}_{0} \cdot d\vec{l} &= V_0(A) - V_0(B) = -\Delta V \\
+			&\Rightarrow \vec{E}_{0} \cdot d\vec{l} = -dV_{0} \\
+			&\Rightarrow \vec{E}_0 = -\vec{\nabla} V_0 \equiv -\vec{\mathrm{grad}} V_0
+		\end{align*}
+		
+		\begin{equation}
+			\text{Potenziale generato: } V_0(r) = k\frac{Q}{r}
+		\end{equation}
+		
+		
+		\section{Dipolo elettrico}
+		
+		\begin{align*}
+			V(P) &= \frac{q}{4\pi\epsilon_0}\left(\frac{1}{r_2}-\frac{1}{r_1}\right) \\
+			&\Rightarrow kq\frac{r_1^2-r_2^2}{r_1r_2\left(r_1+r_2\right)} \\
+			&\Rightarrow \frac{1}{4\pi\epsilon_0}\left(\vec{p}\cdot\vec{r}\right)\frac{1}{r^3}
+		\end{align*}
+		
+		\begin{align*}
+			\vec{E} &= \frac{1}{4\pi\epsilon_0} \left(\frac{3(\vec{p}\cdot\vec{r})\vec{r}}{r^5} - \frac{\vec{p}}{r^3}\right) \Rightarrow \\
+			E_r &= \frac{2kp\cos\theta}{r^3} \\
+			E_\theta &= \frac{kp\sin\theta}{r^3}			
+		\end{align*}
+		
+		
 		
 		\section{Costanti}
 		$\epsilon_{0}=8.854 \cdot 10^{-12}$
@@ -94,6 +131,18 @@
 			\frac{\partial}{\partial x}\hat{i} +
 			\frac{\partial}{\partial y}\hat{j} +
 			\frac{\partial}{\partial z}\hat{k}
+		\end{equation}
+		
+		\begin{equation}
+			\text{Momento di dipolo elettrico: }\vec{p} \equiv q \vec{d}
+		\end{equation}
+		
+		\begin{equation}
+			\text{Densità: } \sigma = \frac{q}{S}
+		\end{equation}
+		
+		\begin{equation}
+			\text{Due piani paralleli: }\vec{E}_0 = \frac{\sigma}{\epsilon_0} \hat{i}
 		\end{equation}
 		
 		
